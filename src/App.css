@@ -1,3 +1,7 @@
-.headerPart {
+/* App.css */
+
+/* ヘッダーのスタイル */
+.header {
   background-color: #f5f5f5;
+  text-align: center;
 }

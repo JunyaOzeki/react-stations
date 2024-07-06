@@ -1,5 +1,3 @@
-// @ts-check
-
 import { useState } from 'react'
 import { DogImage } from './DogImage'
 
@@ -9,21 +7,19 @@ export const Description = () => {
   )
 
   const onClickChangeImage = () => {
-    fetch('https://dog.ceo/api/breeds/image/random') // APIのURL
-      .then(response => {
-        return response.json()
-      })
+    fetch('https://dog.ceo/api/breeds/image/random')
+      .then(response => response.json())
       .then(myJson => {
         setDogUrl(myJson['message'])
       })
   }
 
   return (
-    <>
+    <div>
       <p>犬の画像を表示するサイトです</p>
       <DogImage imageUrl={dogUrl} />
       <button onClick={onClickChangeImage}>更新</button>
-    </>
+    </div>
   )
 }
 
